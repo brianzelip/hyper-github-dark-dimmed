@@ -1,0 +1,17 @@
+{
+  "name": "hyper-github-dark-dimmed",
+  "version": "0.1.0",
+  "description": "Port of GitHub Dark Dimmed theme for Hyper terminal.",
+  "author": {
+    "name": "Brian Zelip",
+    "url": "https://zelip.me"
+  },
+  "license": "MIT",
+  "keywords": [
+    "hyper",
+    "theme",
+    "dark theme",
+    "GitHub Dark Dimmed"
+  ],
+  "main": "index.js"
+}
