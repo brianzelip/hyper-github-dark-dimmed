@@ -7,6 +7,10 @@
     "url": "https://zelip.me"
   },
   "license": "MIT",
+  "homepage": "https://github.com/brianzelip/hyper-github-dark-dimmed",
+  "bugs": {
+    "url": "https://github.com/brianzelip/hyper-github-dark-dimmed/issues"
+  },
   "keywords": [
     "hyper",
     "theme",
