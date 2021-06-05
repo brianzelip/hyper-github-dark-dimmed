@@ -17,6 +17,9 @@ const lightMagenta = '#dcbdfb';
 const lightCyan = '#56d4dd';
 const lightWhite = '#cdd9e5';
 
+const primerCodemirrorBG = '#22272e';
+const primerBorderPrimary = '#444c56';
+const primerUnderlinenavBorderActive = '#f78166';
 const accentColor = blue;
 
 exports.decorateConfig = (config) =>
@@ -24,14 +27,15 @@ exports.decorateConfig = (config) =>
     cursorColor: accentColor,
     cursorAccentColor: lightWhite,
     foregroundColor: white,
-    backgroundColor: black,
-    borderColor: 'rgba(255,255,255, 0.1)',
+    backgroundColor: primerCodemirrorBG,
+    borderColor: primerBorderPrimary,
     selectionColor: 'rgba(255,255,255, 0.1)',
     css: `
     ${config.css || ''}
     .tab_tab {
       border: 0;
-      background-color: rgba(255, 255, 255, 0.02);
+      border-bottom: 1px solid ${primerBorderPrimary} !important;
+      background-color: ${primerCodemirrorBG};
     }
     .tab_text {
       background-color: rgba(255, 255, 255, 0.02);
@@ -41,7 +45,13 @@ exports.decorateConfig = (config) =>
     }
     .tab_textActive {
       background-color: ${black};
-      border-top: 2px solid ${accentColor} !important;
+      border-top: 1px solid ${primerUnderlinenavBorderActive} !important;
+    }
+    .tabs_nav {
+      border-bottom-color: ${primerBorderPrimary} !important;
+    }
+    .tabs_borderShim {
+      display: none;
     }
   `,
     colors: {
