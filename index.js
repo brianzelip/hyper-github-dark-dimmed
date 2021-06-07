@@ -1,3 +1,12 @@
+/**
+ * Map GitHub Dark Dimmed theme, as applied to VS Code, to Hyper.
+ *
+ * @author Brian Zelip
+ * @version v0.2.0
+ * @license MIT
+ * @see {@link https://github.com/brianzelip/hyper-github-dark-dimmed.git|Source}
+ */
+
 const gh = require('@primer/primitives/dist/json/colors/dark_dimmed.json');
 
 const bgSecondary = 'rgb(30, 34, 40)';
