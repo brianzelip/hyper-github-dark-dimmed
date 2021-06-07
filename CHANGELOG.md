@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.1] - 2021-06-07
+
+### Updated
+
+- readme: Fix install script
+
 ## [0.2.0] - 2021-06-07
 
 ![Screenshot](./screenshot-hyper-github-dark-dimmed.png)

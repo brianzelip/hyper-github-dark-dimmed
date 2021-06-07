@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm i hyper-github-dark-dimmed
+hyper install hyper-github-dark-dimmed
 ```
 
 ## Contributing
