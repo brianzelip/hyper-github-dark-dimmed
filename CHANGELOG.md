@@ -7,12 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2021-06-07
+
+![Screenshot](./screenshot-hyper-github-dark-dimmed.png)
+
+### Added
+
+- screenshot
+
 ### Updated
 
 - index.js
   - import primitives data
   - refactor ansi colors
   - finalize hyper css selectors and styling approach
+  - finalize js vars and property values
+- readme: Add screenshot and metadata
+
+### Removed
+
+- prior art/
 
 ## [0.1.1] - 2021-06-05
 
@@ -43,5 +57,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .gitignore
 
 [unreleased]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...HEAD
+[0.2.0]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.0
 [0.1.1]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/brianzelip/hyper-github-dark-dimmed/releases/tag/v0.1.0
