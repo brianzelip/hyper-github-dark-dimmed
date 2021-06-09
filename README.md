@@ -12,6 +12,10 @@
 hyper install hyper-github-dark-dimmed
 ```
 
+## Related
+
+See also [hyper-github-light](https://github.com/brianzelip/hyper-github-light).
+
 ## Contributing
 
 Open a PR!
