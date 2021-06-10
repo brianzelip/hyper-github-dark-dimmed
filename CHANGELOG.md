@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.4] - 2021-06-10
+
+### Updated
+
+- index.js
+  - add icon hover state styles
+  - update header
+  - add var grouping comments
+
 ## [0.2.3] - 2021-06-10
 
 ### Updated
@@ -81,6 +90,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .gitignore
 
 [unreleased]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...HEAD
+[0.2.4]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.4
 [0.2.3]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.3
 [0.2.2]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.2
 [0.2.1]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.1
