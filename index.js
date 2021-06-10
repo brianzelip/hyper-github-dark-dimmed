@@ -48,7 +48,8 @@ exports.decorateConfig = (config) =>
     ${config.css || ''}
 
     .tabs_nav {
-      border-bottom-color: ${borderColor};
+      border: 0;
+      border-bottom: 1px solid ${borderColor} !important;
     }
 
     .tabs_title {
