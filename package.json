@@ -1,7 +1,7 @@
 {
   "name": "hyper-github-dark-dimmed",
-  "version": "0.2.4",
-  "description": "GitHub Dark Dimmed theme for Hyper terminal.",
+  "version": "1.0.0",
+  "description": "GitHub VSCode Dark Dimmed theme for Hyper terminal.",
   "author": {
     "name": "Brian Zelip",
     "url": "https://zelip.me"
@@ -21,10 +21,11 @@
     "terminal",
     "theme",
     "dark",
-    "GitHub Dark Dimmed"
+    "GitHub Dark Dimmed",
+    "GitHub VSCode Theme"
   ],
   "main": "index.js",
   "dependencies": {
-    "@primer/primitives": "^4.3.10"
+    "github-vscode-themes": "^4.1.1"
   }
 }

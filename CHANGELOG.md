@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2021-06-27
+
+🚢 🎉
+
+This work changes the source of the theme data. The data now comes from one step up Primer's design system stack - instead of primitives, the source is now github-vscode-theme (which in turn pulls from primitives). github-vscode-theme was not available via npm, so I had to create github-vscode-themes npm package.
+
+Making this change allowed me to more accurately follow VSCode's implementation of the dark dimmed theme.
+
+### Added
+
+- github-vscode-themes dependency
+
+### Updated
+
+- index.js
+  - Refactor data based on new github-vscode-themes dependency
+  - Add more state variables
+  - Style border-top-right-radius of last tab when not active
+  - Removed ANSI gray since the new theme dependency doesn't provide it
+- package.json description and keywords
+- README
+
+### Removed
+
+- @primer/primitives dependency
+
 ## [0.2.4] - 2021-06-10
 
 ### Updated
@@ -90,6 +116,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .gitignore
 
 [unreleased]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...HEAD
+[1.0.0]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v1.0.0
 [0.2.4]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.4
 [0.2.3]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.3
 [0.2.2]: https://github.com/brianzelip/hyper-github-dark-dimmed/compare/v0.1.0...v0.2.2

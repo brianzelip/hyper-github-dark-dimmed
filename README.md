@@ -2,7 +2,7 @@
 
 ![npm](https://img.shields.io/npm/v/hyper-github-dark-dimmed)
 
-[GitHub Dark Dimmed theme](https://github.com/primer/github-vscode-theme), as applied to VS Code, for [Hyper](https://github.com/vercel/hyper).
+[GitHub VSCode Dark Dimmed theme](https://github.com/primer/github-vscode-theme) for [Hyper](https://github.com/vercel/hyper).
 
 ![Screenshot](./screenshot-hyper-github-dark-dimmed.png)
 
@@ -14,7 +14,8 @@ hyper install hyper-github-dark-dimmed
 
 ## Related
 
-See also [hyper-github-light](https://github.com/brianzelip/hyper-github-light).
+- [github-vscode-themes](https://github.com/brianzelip/github-vscode-themes): source of this project's theme data
+- [hyper-github-light](https://github.com/brianzelip/hyper-github-light): another GitHub-based hyper theme
 
 ## Contributing
 
