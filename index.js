@@ -1,46 +1,48 @@
 /**
- * Map GitHub Dark Dimmed theme, as applied to VS Code, to Hyper.
+ * Map GitHub VSCode Dark Dimmed theme to Hyper.
  *
  * @author Brian Zelip
- * @version v0.2.4
+ * @version v1.0.0
  * @license MIT
- * @see {@link https://github.com/brianzelip/hyper-github-dark-dimmed.git}
+ * @see {@link https://github.com/brianzelip/hyper-github-dark-dimmed}
  */
 
 // Data
-const gh = require('@primer/primitives/dist/json/colors/dark_dimmed.json');
+const theme = require('github-vscode-themes').darkDimmed;
 
 // ANSI
-const black = gh.ansi.black;
-const red = gh.ansi.red;
-const green = gh.ansi.green;
-const yellow = gh.ansi.yellow;
-const blue = gh.ansi.blue;
-const magenta = gh.ansi.magenta;
-const cyan = gh.ansi.cyan;
-const white = gh.ansi.white;
-const gray = gh.ansi.gray;
-const lightBlack = gh.ansi.blackBright;
-const lightRed = gh.ansi.redBright;
-const lightGreen = gh.ansi.greenBright;
-const lightYellow = gh.ansi.yellowBright;
-const lightBlue = gh.ansi.blueBright;
-const lightMagenta = gh.ansi.magentaBright;
-const lightCyan = gh.ansi.cyanBright;
-const lightWhite = gh.ansi.whiteBright;
+const black = theme.colors['terminal.ansiBlack'];
+const red = theme.colors['terminal.ansiRed'];
+const green = theme.colors['terminal.ansiGreen'];
+const yellow = theme.colors['terminal.ansiYellow'];
+const blue = theme.colors['terminal.ansiBlue'];
+const magenta = theme.colors['terminal.ansiMagenta'];
+const cyan = theme.colors['terminal.ansiCyan'];
+const white = theme.colors['terminal.ansiWhite'];
+const lightBlack = theme.colors['terminal.ansiBrightBlack'];
+const lightRed = theme.colors['terminal.ansiBrightRed'];
+const lightGreen = theme.colors['terminal.ansiBrightGreen'];
+const lightYellow = theme.colors['terminal.ansiBrightYellow'];
+const lightBlue = theme.colors['terminal.ansiBrightBlue'];
+const lightMagenta = theme.colors['terminal.ansiBrightMagenta'];
+const lightCyan = theme.colors['terminal.ansiBrightCyan'];
+const lightWhite = theme.colors['terminal.ansiBrightWhite'];
 
-// Hyper
-const cursorColor = blue;
-const foregroundColor = gh.text.primary;
-const backgroundColor = gh.bg.canvas;
-const selectionColor = gh.codemirror.selectionBg;
-const borderColor = gh.border.primary;
+// Hyper API
+const cursorColor = theme.colors['editorCursor.foreground'];
+const foregroundColor = theme.colors['editor.foreground'];
+const backgroundColor = theme.colors['editor.background'];
+const selectionColor = theme.colors['editor.selectionBackground'];
+const borderColor = theme.colors['tab.border'];
 
 // State
-const textSecondaryColor = gh.text.secondary;
-const borderActiveColor = gh.menu.borderActive;
-const bgSecondaryColor = 'rgb(30, 34, 40)'; // Used in VSCode but not found in gh
-const iconHoverBgColor = gh.scale.gray[6];
+const tabInactiveForeground = theme.colors['tab.inactiveForeground'];
+const tabInactiveBackground = theme.colors['tab.inactiveBackground'];
+const tabActiveForeground = theme.colors['tab.activeForeground'];
+const tabActiveBackground = theme.colors['tab.activeBackground'];
+const tabActiveBorderTop = theme.colors['tab.activeBorderTop'];
+const tabHoverBackground = theme.colors['tab.hoverBackground'];
+const listHoverBackground = theme.colors['list.hoverBackground'];
 
 exports.decorateConfig = (config) =>
   Object.assign({}, config, {
@@ -58,8 +60,9 @@ exports.decorateConfig = (config) =>
     }
 
     .tabs_title {
+      /* One tab only */
       border-top: 1px solid transparent;
-      color: ${foregroundColor} !important;
+      color: ${tabActiveForeground} !important;
     }
 
     .tab_tab {
@@ -74,26 +77,33 @@ exports.decorateConfig = (config) =>
       border-right: 1px solid ${borderColor} !important;
       border-bottom: 1px solid ${borderColor} !important;
       border-left: 1px solid transparent !important;
-      color: ${textSecondaryColor} !important;
-      background-color: ${bgSecondaryColor} !important;
+      color: ${tabInactiveForeground} !important;
+      background-color: ${tabInactiveBackground} !important;
+    }
+    .tab_tab > .tab_text:hover {
+      background-color: ${tabHoverBackground} !important;
     }
     .tab_tab:first-of-type > .tab_text {
       border-left-color: ${borderColor} !important;
     }
     .tab_tab:last-of-type > .tab_text {
+      border-top-right-radius: 10px;
       border-right-color: transparent !important;
+    }
+    .tab_tab:last-of-type > .tab_text.tab_textActive {
+      border-top-right-radius: 0px;
     }
 
     .tab_tab > .tab_text.tab_textActive {
-      border-top: 1px solid ${borderActiveColor} !important;
+      border-top: 1px solid ${tabActiveBorderTop} !important;
       border-bottom: 1px solid transparent !important;
-      color: ${foregroundColor} !important;
-      background-color: ${backgroundColor} !important;
+      color: ${tabActiveForeground} !important;
+      background-color: ${tabActiveBackground} !important;
     }
 
     .tab_icon.tab_iconHovered {
       color: ${foregroundColor} !important;
-      background-color: ${iconHoverBgColor} !important;
+      background-color: ${listHoverBackground} !important;
     }
 
     .tabs_borderShim {
@@ -109,7 +119,6 @@ exports.decorateConfig = (config) =>
       magenta,
       cyan,
       white,
-      gray,
       lightBlack,
       lightRed,
       lightGreen,
